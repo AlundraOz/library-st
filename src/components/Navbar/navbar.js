@@ -8,7 +8,7 @@ import { Navbar } from 'react-bootstrap';
 import { NavDropdown } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import Image from '../../../node_modules/react-bootstrap/Image';
-
+import Logo from '../img/logo.png';
 
 
 const NavHome = () => {
@@ -17,11 +17,14 @@ const NavHome = () => {
 
   const scrollFunction= () => {
     let headerEl = document.getElementById("header_area") 
+    let Logito = document.getElementById("logo")
 
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
       headerEl.classList.add("navbar_fixed");
+      Logito.classList.add("logo-change");
     } else {
       headerEl.classList.remove("navbar_fixed");
+      Logito.classList.remove("logo-change");
     }
   }
 
@@ -29,39 +32,6 @@ const NavHome = () => {
   return(
 
     <Container fluid id="header_area">
-      <Row className="header-top">
-        <Container>
-          <div className="d-flex align-items-center">
-            <div id="logo">
-                <a href="/">< Image style={{height: '140px', width: '150px', backgroundColor: '#cca772', padding: '30px'}}src="https://grandhotelbariloche.com/wp-content/uploads/2019/01/LOGO_original-300x300.png" alt="" title="" /></a>
-            </div>
-            <div className="ml-auto d-none d-md-block d-md-flex">
-              <div className="media header-top-info">
-                <div className="ml-auto d-none d-md-block d-md-flex">
-                  <div className="media header-top-info">
-                    <span className="header-top-info__icon">
-                      <FaPhoneVolume/>
-                    </span>
-                    <div className="media-body">
-                      <p>Have any question?</p>
-                      <p>Free: <a href="tel:+12 365 5233">+12 365 5233</a></p>
-                    </div>
-                  </div>
-                  <div className="media header-top-info">
-                    <span className="header-top-info__icon">
-                        <FaRegEnvelope/>
-                    </span>
-                    <div className="media-body">
-                      <p>Have any question?</p>
-                      <p>Free: <a href="tel:+12 365 5233">+12 365 5233</a></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </Row>
       <Container fluid className="main_menu">
           <Row style={{ background: "white", width: "100vw", padding: '0px 52px 0px 52px', marginLeft: '-30px' }}> 
             <Col style={{ border: 'none'}}>

@@ -343,12 +343,10 @@
 }
 
 
-.header-top{
-  padding: 17px 0;
-  border-bottom: 1px solid #F0F0F0;
-
+#logo{
+	overflow: visible;
   @media(min-width: 767px){
-    padding: 27px 0;
+   
   }
   
   @media(max-width: 767px){
